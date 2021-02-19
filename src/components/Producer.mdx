@@ -1,0 +1,15 @@
+---
+name: Producer
+route: /Components/Producer
+menu: Components
+---
+
+# Producer
+This spring boot application is the Kafka producer or, as it named generator. There is no special consideration for this app. This application will generate semi-random data and pass them to Kafka. You could access this application with rest requests. 
+
+- **send ad** Accessible from <a href='/sendAd'>/sendAd</a>:
+	Will generate several `ImpressionEvent`s(a random number between 0 to 1000) and pass them to Kafka. I'll put the generated Id on a `ConcurrentHashMap` if it has been used so far or not.
+
+- **Send Good Click** Accessible from <a href='/sendGoodClick'>/sendGoodClick</a>: will use the `HashMap` and send acceptable click events for each requestId with a random chance of 15% .
+
+- **Send Bad Click** Accessible from <a href='/sendBadClick'>/sendBadClick</a>: will use the `HashMap` and send unacceptable  click events for each requestId with a chance of 10% .

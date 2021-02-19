@@ -1,0 +1,59 @@
+---
+name: Getting Started
+route: /
+---
+
+# Getting Started
+
+This project is a compact and straightforward bundle for data flow using Kotlin, Kafka, and Cassandra. 
+- **Generate Random Events**. 
+- **Kafka Producer**. sends generated events to Kafka. 
+- **Kafka Consumer(Kafka Stream)**. Consumes the messages from Kafka.
+- **Cassandra Interface**. Manipulate data on Cassandra.
+
+## My Assumptions
+I've assumed that impression time is the maximum legal time for an ad to be on display, so every click that occurs after that time is illegal and should not be considered a valid click. So my scenario is as follow.
+`ImpressionEvent` will lead to creating a new `AdClick` instance, and after that, there are two possibilities. First, `ClickEvent` has a `clickTime` less than `AdEvent.impressionTime`, these types of events are legal events, and I'll change the `AdEvent.clickTime` to this new `clickTime`. The second scenario is the opposite of the first scenario, and it is when `clickTime` is bigger than `impressionTime` for this scenario, I've considered a table named `MaliciousEvent`. I will keep track of them in the database using this table.
+
+## Components
+
+For using and making changes in this project, you should familiarize your self with its component, which you could easily access from the menu or links below
+
+- <a href='Components/Docker'> Dockers </a>
+- <a href='Components/Producer'> Producer </a>
+- <a href='Components/Consumer'> Consumer </a>
+
+## Time Table
+
+<table>
+<tr>
+<th>Work</th>
+<th>Actual Time</th>
+<th>Predicted Time</th>
+</tr>
+<tr>
+<td>
+Study about Cassandra
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+</tr>
+
+
+<tr>
+<td>
+Study about Cassandra
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+</tr>
+
+</table>

@@ -1,0 +1,1 @@
+import { InlineCode } from '@nejcm/docz-theme-extended';

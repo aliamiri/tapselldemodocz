@@ -1,0 +1,18 @@
+---
+name: Docker
+route: /Components/Docker
+menu: Components
+---
+
+
+# Dockers
+
+I have a sigle docker-compose file which will deploy all the containers that are used in this project. 
+
+- **Kafdrop, Kafka, Zookeeper** : I just did a little modification on an avaible docker compose for these three.
+
+- **tapsellcassandra** : Used official cassandra image and add a bash script to create my keyspace.
+
+- **tapsellbigdatahandler , generator** : Used alpine image and add respected jar files of my project.
+
+- **nginx** : just a generic nginx container to act as a reverse proxy.
